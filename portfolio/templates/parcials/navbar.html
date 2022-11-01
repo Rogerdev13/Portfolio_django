@@ -1,0 +1,17 @@
+{%load static%}
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold fst-italic" href="/">RogerDev</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        
+        <li class="nav-item d-flex align-items-center"><a class="nav-link me-4" href="{%url 'blog:posts'%}">Blog</a></li>
+        <li class='nav-item d-flex align-items-center'><a  href="{% static 'portafolio/xd.pdf' %}" target="_BLANK" class='btn btn-success btn-sm'>Download CV</a></li>
+      </div>
+    </div>
+  </div>
+</nav>

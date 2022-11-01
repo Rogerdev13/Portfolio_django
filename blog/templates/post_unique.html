@@ -1,0 +1,10 @@
+
+{%extends 'layout.html' %}
+{%block content%}
+<h3>{{post.title}}</h3>
+<h4 class="my-2 h5 text-muted">{{post.date|date:'F jS Y'}}</h4>
+<a class="btn btn-outline-light rounded-0 mt-3 mb-2" href="{%url "blog:posts"%}">See More Posts</a>
+<img class="image-skere" id="image" src={{post.image.url}}></img>
+<div class="my-4"><p>{{post.description | safe}}</p></div>
+
+{%endblock%}

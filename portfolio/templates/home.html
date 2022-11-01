@@ -1,0 +1,41 @@
+{%extends 'layout.html'%}
+{%load static %}
+
+
+{%block content%}
+
+<header class="row  text-white my-4">
+  <div class="col-md-4">
+    <img class="img" src={%static 'portafolio/xd.jpg'%} alt='xd'>
+  </div>
+  <div class="col-md-8 my-auto ps-5">
+    <h1>I'm RogerDev</h1>
+    <h3>Web Designer</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sapien, feugiat sed quam nec, molestie bibendum est. Pellentesque tristique lacus sed mauris pretium luctus. Donec vitae pretium erat, vel egestas metus. Quisque vel facilisis dolor. Quisque vehicula ultricies nulla, non molestie quam cursus in. Sed vitae velit dolor. Phasellus elit ipsum, fringilla ut tempor ut, maximus eu lectus. Suspendisse ut urna tellus. Pellentesque porta id lorem ac convallis.
+    Nulla interdum nunc sed ex rutrum, a aliquet quam maximus. Morbi tempus ut est eget commodo. Praese</p>
+    <a class="btn btn-success btn-lg rounded-0 my-3" href={%static 'portafolio/xd.pdf'%}>Download CV</a>
+  </div>
+</header>
+
+<div class='row my-5 text-center'>
+
+  <h3>My Projects</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sapien, feugiat sed</p>
+
+{%for project in projects%}
+<div class='col-md-4 p-4'>
+  <div class='card bg-black card-project'>
+    <div class="card-body">
+      <img  src={{project.image.url}} alt={{project.title}} class="img-fluid"></img>
+      <h2>{{project.title}}</h2>
+      <p>{{project.description}}</p>
+     
+      {%if project.url%}
+      <a class="btn btn-outline-light rounded-0 btn-sm mt-5" href={{project.url}}>{{project.url}}</a>
+      {%endif%}
+    </div>
+  </div>
+</div>
+{%endfor%}
+</div>
+{%endblock%}
